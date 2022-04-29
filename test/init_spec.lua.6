@@ -1,0 +1,12 @@
+-- luassert solution
+local uppercase = require("uppercase")
+
+describe("uppercase", function()
+    describe("to_uppercase", function()
+        it("should throw if text is not a string", function()
+            assert.has.errors(function()
+                uppercase.to_uppercase({ "not a string" })
+            end)
+        end)
+    end)
+end)
